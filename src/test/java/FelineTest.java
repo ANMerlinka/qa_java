@@ -20,4 +20,9 @@ public class FelineTest {
         List<String> result = List.of("Животные", "Птицы", "Рыба");
         Assert.assertEquals(result, feline.eatMeat());
     }
+
+    @Test
+    public void testGetKittens() {
+        Assert.assertEquals(1, feline.getKittens());
+    }
 }

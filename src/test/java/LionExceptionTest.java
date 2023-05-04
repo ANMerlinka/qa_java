@@ -1,10 +1,12 @@
 import com.example.Feline;
 import com.example.Lion;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 @RunWith(Parameterized.class)
 public class LionExceptionTest {
@@ -12,6 +14,11 @@ public class LionExceptionTest {
 
     @Mock
     private Feline feline;
+
+    @Before
+    public void init() {
+        MockitoAnnotations.initMocks(this);
+    }
 
     public LionExceptionTest(String sex) {
         this.sex = sex;
